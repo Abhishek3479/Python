@@ -25,3 +25,49 @@ class Person:
 
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+#Valid only in case of class and object  (not valid outside the class)
+'''
+when multiple object variables are pointing to same memory location then on changing
+reference of any of object variable  affects all other varible  those pointing 
+to same memory location.
+
+node1.next pointing to None
+then last_node=node1   Now last_node will point to same memory location where node1 is pointing
+last_node.next=node2   now next attribute of last stores reference of node2 means pointing to node2 object now
+so node1.next will also points to node2
+
+so the next attribute of all objects, pointing to same location where node1 was pointing, got changed
+
+
+conclusion --> in case of class and instanse
+
+if a=b
+b=c 
+the any changes to c will affect a and b both 
+'''
+#when 
+#Changing reference of last_node.next changes reference of node1.next
+
+class Node:
+    def __init__(self, data):
+        self.data = data  # Store data
+        self.next = None  # Initialize next as None
+
+node1 = Node(1)  # Node1 created with data 1
+node2 = Node(2)  # Node2 created with data 2
+
+#print(node1)         #object at 0x7f19ac730310>
+#print(node2)         #object at 0x7f19ac7304c0>
+
+last_node = node1    
+#print(last_node)     # #object at 0x7f19ac730310>
+
+last_node.next=node2
+print(node1.next)      #object at 0x7ff367eb74c0>    <--Address to which node1.next is pointing which is node2
+print(node2)           #object at 0x7ff367eb74c0>    <--Address to which nod2 is poinding
+
+
+--------------------------------------------------------------------------------------------------------------------------------
