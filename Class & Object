@@ -1,0 +1,15 @@
+
+###We can create method within a  class without using self argument as well and to call the function then just do class_name.method_name()
+
+class A:
+  
+  def __init__(self):
+    pass
+  
+  def func():
+    print('hi')
+
+
+print(A.func())        #    hi
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------
