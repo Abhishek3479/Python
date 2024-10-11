@@ -13,3 +13,15 @@ class A:
 print(A.func())        #    hi
 
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#We can use  and modify both class variables and instance variable within any method in a class but local variables defined within any method are specific to that method only and cannot be use or modify within any other method of a class.
+
+class Person:
+    def __init__(self, name):
+        self.name = name  # Instance variable (attached to the object  self.name represent name is attribute of an object)
+        name = "John"     # Local variable (exists only in this method)
+
+    def show_name(self):
+        print(self.name)  # Accesses instance variable
+
+
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
