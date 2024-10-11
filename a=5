@@ -1,0 +1,17 @@
+**Reference** ka Hindi mein matlab hai **संदर्भ** ya **उल्लेख**. Lekin programming ke context mein, reference ka matlab hota hai **किसी object ya variable ke location ko point karne ka tarika**.
+
+Programming mein, **reference** ka matlab hai:
+- Jab aap ek variable banate ho, to wo variable ek object ko **reference** karta hai, yaani us object ko **point** karta hai jaha wo memory mein store hota hai.
+- Ek tarike se, reference us object ka **पता** (address) hota hai, lekin Python jese languages mein aapko directly memory address nahi dikhaya jata, balki aapko sirf reference diya jata hai.
+
+### Example:
+Agar aap likhte ho:
+```python
+a = 5
+```
+To `a` yeh reference karta hai ki object `5` kaha memory mein store hai, lekin aapko wo memory address directly nahi dikhaya jata. Aap `a` ke through `5` ko access kar sakte ho, aur us object ko modify kar sakte ho agar wo mutable ho.
+
+### Summary:
+- **Reference (संदर्भ)** programming mein ek tarika hai jisse ek variable kisi object ko point karta hai.
+- Python mein, variables objects ko **reference** karte hain, yaani unka memory mein jo location hai usko indirectly dikhate hain.
+
