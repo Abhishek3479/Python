@@ -123,13 +123,16 @@ when we change reference of a variable within a fucntion then there will be 2 va
 another is local(inside of function)   so, when we came outside of function then variable with global name will be used and within 
 function local variable will be used.
 
-very useful concept in case of recursion.
+
 
 updating object does no change reference but assinging a new object definetly change reference of variable to new object
 in case of list use append,pop etc list functions to update the same list object
 = operator  used to assign new object reference
 
-Always remember if present in global and  as well as in local scope teh LEGB rule should be follwed
+
+very useful concept in case of recursion.
+
+Always remember if a variable is present in global   as well as in local scope then LEGB rule should be follwed
 priority given to Local then enclosed then global then builtin.
 --------------------------------------------------------------------------------------------------------------------------------------
 
