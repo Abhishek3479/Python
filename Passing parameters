@@ -91,7 +91,7 @@ print(type(newnode.data))   <class 'int'>
 
 newnode is mutable 
 newnode.next is also mutable 
-but newnode.data holds reference of integer object so it is immutable.
+but newnode.data holds reference of integer object which is immutable.
 
 ----------------------------------------------------------------------------------------------------------------------------
 
