@@ -1,0 +1,78 @@
+
+what happens when Passing parameters to a function.
+when we pass immutable object (e.g., integers, strings, tuples, floats) to a fucntion then any modifications to it within fucntion will not be reflected outside of function,
+but in case of  Mutable objects (like lists, dictionaries, sets, and user-defined objects) any modification within a function always reflected outside of function.
+
+
+In python objects are always passed by reference to a function whether object is mutable or immutable. 
+
+If object passed to function having immutable data types then any modifications to it within fucntion will create a new object and  no changes will be reflected outside the function.
+Immutable objects (e.g., integers, strings, tuples, floats)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Any modifications to a immutable object passed to a function, will create a new object and no changes reflect outside of fucntion.
+for example-->
+If we pass num variable, that holds referecnce of immutable object here integer, to a function then before any modification to num object 
+num points to same object within and outside of function but after modification within function nnew object created of value 9 now new num varable created that point to new object 9
+
+num=8
+print(id(num))                #9801472
+
+def f(num):
+  
+  print(id(num))             #9801472                        #Before any modification to num, num points to same object 8 in memory same as it is doing outside of function
+  
+  num=9
+
+  print(id(num))             #9801504                        #local variable created with name=num having scope within this function only
+  
+f(num)
+
+print(num)      #8                                          #Within function num=9 but outside we are getting unmodified value of num=8
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+class objects are always mutable for ex-->  linked list node that consist of data and next(holds reference) attributes, 
+we can change both the data within node and address of next node within a node. and after chang
+
+
+For ex->  After modifying node data newnode points to same memory location where it was earlier.
+basically think of node as a box cointaing two other box if we do any modification's within like adding one more box, or removing all boxes, any operations within that box will 
+not effects its memory location.
+
+class Node:
+  def __init__(self, val=0, next=None):
+    self.val = val
+    self.next = next
+  
+newnode=Node(-1)
+
+print(id(newnode))     #140568722936592
+
+
+newnode.val=5
+print(id(newnode))    #140568722936592             
+
+
+
+--Similar to node think of list,dict etc are like boxes any modifications within them will not change the object. 
+
+
+For ex-->Appending a element within a list object
+lst=[1]
+print(id(lst))    #140531456148224
+
+lst.append(2)
+print(id(lst))   #140531456148224
+
+
+Assigning a new object always change reference of variable
+ if we assign a new object to lst variable then lst will points to new memory location(here we have changed reference of variable)
+lst=[1,2]
+print(id(lst))    #140616220992320
+
+Here we are assgning new list object to lst variable. the values within list are looking same but list we are assgning is new, variable always holds reference of outermost object.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
