@@ -3,6 +3,7 @@ what happens when Passing parameters to a function.
 when we pass immutable object (e.g., integers, strings, tuples, floats) to a fucntion then any modifications to it within fucntion will not be reflected outside of function,
 but in case of  Mutable objects (like lists, dictionaries, sets, and user-defined objects) any modification within a function always reflected outside of function.
 
+So, in recursion we pass objects to function then always keep this concept in mind within function and outside of fucntion for mutable and immutble datat types.
 
 In python objects are always passed by reference to a function whether object is mutable or immutable. 
 
