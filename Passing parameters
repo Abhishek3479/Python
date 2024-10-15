@@ -134,6 +134,12 @@ very useful concept in case of recursion.
 
 Always remember if a variable is present in global   as well as in local scope then LEGB rule should be follwed
 priority given to Local then enclosed then global then builtin.
+
+
+Think of recursive function are like nested functions and priority always given to local variable, means variable with current scope of 
+function.
+
+
 --------------------------------------------------------------------------------------------------------------------------------------
 
 
